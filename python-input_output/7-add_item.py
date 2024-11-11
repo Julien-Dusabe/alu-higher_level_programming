@@ -1,7 +1,8 @@
 #!/usr/bin/python3
 """
-This module allows appending command-line arguments to a list
-stored in a JSON file. If the file doesn't exist, it creates a new file.
+This script adds all command-line arguments to a Python list and saves
+them to a file named 'add_item.json' as a JSON representation. If the file
+does not exist, it creates the file and initializes it.
 """
 
 
@@ -9,20 +10,16 @@ import sys
 from 5-save_to_json_file import save_to_json_file
 from 6-load_from_json_file import load_from_json_file
 
-
-def main():
-    """
-    This script adds command-line arguments to a list and saves the list as a JSON
-    representation in a file named 'add_item.json'. If the file doesn't exist, it is created.
-    """
+if __name__ == "__main__":
     try:
+        # Load the existing list from 'add_item.json'
         items = load_from_json_file('add_item.json')
-    except (FileNotFoundError, ValueError):
+    except FileNotFoundError:
+        # If the file does not exist, initialize an empty list
         items = []
 
+    # Add the command-line arguments to the list
     items.extend(sys.argv[1:])
-    save_to_json_file(items, 'add_item.json')
 
-
-if __name__ == "__main__":
-    main()
+    # Save the updated list back to 'add_item.json'
+    save_to_json_file(items,
