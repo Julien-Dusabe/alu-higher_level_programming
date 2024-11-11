@@ -3,9 +3,10 @@
 Module to write a string to a UTF-8 encoded text file.
 """
 
+
 def write_file(filename="", text=""):
     """
-    Writes a string to a text file (UTF8) and returns the number of characters written.
+    A string to a text file (UTF8),returns the number of characters written.
 
     Args:
         filename (str): The path to the file to be written to.
