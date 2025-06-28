@@ -1,5 +1,8 @@
 #!/usr/bin/python3
-"""This module defines a Rectangle class that can be printed with '#' characters."""
+"""This module defines a Rectangle class.
+
+It can be printed with '#' characters.
+"""
 
 
 class Rectangle:
@@ -56,4 +59,3 @@ class Rectangle:
         for _ in range(self.__height):
             lines.append("#" * self.__width)
         return "\n".join(lines)
-
