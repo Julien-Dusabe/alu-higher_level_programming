@@ -3,7 +3,8 @@
 
 
 class Rectangle:
-    """Defines a rectangle with width, height, and customizable print symbol."""
+    """Defines a rectangle with width, height, 
+    and customizable print symbol."""
 
     number_of_instances = 0
     print_symbol = "#"
