@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """This module defines a Rectangle class that can be printed with '#' characters."""
 
+
 class Rectangle:
     """Represents a rectangle with width and height."""
 
@@ -51,7 +52,7 @@ class Rectangle:
         """Return a string representation of the rectangle using '#' characters."""
         if self.__width == 0 or self.__height == 0:
             return ""
-                lines = []
+        lines = []
         for _ in range(self.__height):
             lines.append("#" * self.__width)
         return "\n".join(lines)
