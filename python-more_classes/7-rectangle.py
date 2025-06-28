@@ -1,5 +1,7 @@
 #!/usr/bin/python3
-"""Module that defines a Rectangle class with enhanced features."""
+"""Module that defines a Rectangle class with enhanced features
+Includes features like customizable print symbols and instance tracking.
+"""
 
 
 class Rectangle:
